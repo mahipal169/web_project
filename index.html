@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Start Header -->
+   <header>
+      <div class="container">
+          <div class="logo">
+              <a href=""><span>Mahipal</span>Singh</a>
+          </div>
+          <div class="trigger-main">
+             <a href="javascript:void(0);" class="ham-burger">
+               <span></span>
+               <span></span>
+             </a>
+          </div>
+          <div class="navbar">
+              <ul>
+                  <li><a href="#home" class="active">Home</a></li>
+                  <li><a href="#register">Register</a></li>
+                  <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn-light">Login</button></li>
+              </ul>
+          </div>
+      </div>
+   </header>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+   
+  <!-- End Header -->
+
+  <!-- Start Home -->
+    <section class="home" id="home">
+       <div class="container">
+           <div class="home-text">
+                 <h1>Hi, I'm Mahipal Singh</h1>
+                 <h3>Computer Science Engineer.</h3>
+           </div>
+       </div>
+    </section>
+ <!-- Register form -->
+   <section class="contact" id="register">
+     <div class="container">
+        <h2 class="title">Register</h2>
+        <div class="contact-content">
+            <form action="action.php" method="POST">
+             <input type="text" placeholder="Name" name="username" required>
+             <input type="text" placeholder="Email" name="email" required>
+             <input type="password" placeholder="Password" name="password" required>
+             <input type="password" placeholder="confirm Password" name="password_confirm" required>
+             <button class="btn-light" id="Submitf">Register</button>
+            </form>
+        </div>
+     </div>
+   </section>
+ <!-- End Register -->
+ <!-- login form -->
+<section class="contact1">
+  <div id="id01" class="modal">
+  
+  <form action="message.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="pngtree-vector-users-icon-png-image_856952.jpg" alt="Avatar" class="avatar">
+    </div>
+      <input type="text" placeholder="username" name="username" required>
+      <input type="text" placeholder="Email" name="email" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <div class="checkbox">
+      <input type="checkbox" name="remember" id="remember" value="1"> Remember me</div>
+      <button type="submit" class="btn-light" name="submit">Login</button>
+  </form>
+</div>
+</section>
+</body>
+</html>
